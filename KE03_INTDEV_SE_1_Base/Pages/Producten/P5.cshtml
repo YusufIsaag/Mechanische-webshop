@@ -17,11 +17,16 @@
 
             <div class="product-rechts">
                 <div class="prijs">€ 329,–</div>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="5" />
+                    <input type="hidden" name="Product" value="Drijfstang ItalianRP" />
+                    <input type="hidden" name="prijs" value="329" />
 
-                <label for="aantal">Aantal:</label>
-                <input type="number" id="aantal" class="aantal-input" value="1" min="1">
+                    <label for="aantal">Aantal:</label>
+                    <input type="number" id="aantal" name="aantal" value="1" min="1" class="aantal-input" />
 
-                <button class="winkelwagen-knop">In winkelwagen</button>
+                    <button type="submit" class="winkelwagen-knop">In winkelwagen</button>
+                </form>
             </div>
         </div>
 

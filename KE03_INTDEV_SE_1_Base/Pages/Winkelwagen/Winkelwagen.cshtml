@@ -13,6 +13,7 @@
             <tr>
                 <th>Product</th>
                 <th>Aantal</th>
+                <th>Prijs per stuk </th>
                 <th>Totaalbedrag</th>
             </tr>
         </thead>
@@ -20,13 +21,39 @@
             @foreach (var item in Model.WinkelwagenItems)
             {
                 <tr>
-                    <td>@item.Product</td>
-                    <td>@item.Aantal</td>
+                    <td>@item.Product.Naam</td> 
+                    <td>
+                        <form method="post" asp-page-handler="UpdateQuantity">
+                            <input type="hidden" name="itemId" value="@item.Id" />
+                            <input type="number" name="aantal" value="@item.Aantal" min="1" class="aantal-input" />
+                            <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                        </form>
+                    </td>
+                    <td>@item.Product.Prijs.ToString("C")</td> 
                     <td>@item.TotaalBedrag.ToString("C")</td>
+                    <td>
+                        <form method="post" asp-page-handler="RemoveItem">
+                            <input type="hidden" name="itemId" value="@item.Id" />
+                            <button type="submit" class="btn btn-sm btn-danger">Verwijder</button>
+                        </form>
+                    </td>
+                    
                 </tr>
             }
         </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-end"><strong>Totaal alle producten:</strong></td>
+                <td><strong>@Model.WinkelwagenItems.Sum(item => item.TotaalBedrag).ToString("C")</strong></td>
+                <td></td>
+            </tr>
+        </tfoot>
     </table>
+    <div class="afrekenen">
+            <button class="betalen">
+                <a asp-area="" asp-page="/Afrekenen/Afrekenen">Verder naar bestellen</a>
+            </button>
+    </div>
 }
 else
 {
@@ -37,23 +64,3 @@ else
 
 
 
-@* @section Scripts { *@
-@*     <script> *@
-@*         // JavaScript voor het bijwerken van aantallen en verwijderen *@
-@*         document.querySelectorAll('.verwijder-knop').forEach(button => { *@
-@*             button.addEventListener('click', function() { *@
-@*                 const itemId = this.getAttribute('data-item-id'); *@
-@*                 // AJAX call naar server om item te verwijderen *@
-@*                 console.log('Verwijder item:', itemId); *@
-@*             }); *@
-@*         }); *@
-
-@*         document.querySelectorAll('.aantal-input').forEach(input => { *@
-@*             input.addEventListener('change', function() { *@
-@*                 const itemId = this.getAttribute('data-item-id'); *@
-@*                 const newQuantity = this.value; *@
-@*                 // AJAX call naar server om aantal bij te werken *@
-@*                 console.log('Update item:', itemId, 'Aantal:', newQuantity); *@
-@*             }); *@
-@*         }); *@
-@*     </script> *@

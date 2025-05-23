@@ -1,3 +1,111 @@
+$screen-xs-min: 0;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-xl-min - 1);
+/* Basisstijlen - voor alle schermen (mobile first) */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: $screen-xs-max) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .table td {
+        padding-left: 40%;
+    }
+}
+
+/* Small devices (tablets, 576px and up) */
+@media (min-width: $screen-sm-min) {
+    body {
+        font-size: 15px;
+    }
+
+    .container {
+        max-width: 540px;
+    }
+
+}
+
+/* Medium devices (desktops, 768px and up) */
+@media (min-width: $screen-md-min) {
+    .container {
+        max-width: 720px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
+/* Large devices (large desktops, 992px and up) */
+@media (min-width: $screen-lg-min) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .product-container {
+        display: flex;
+        gap: 30px;
+    }
+
+    .product-links {
+        flex: 0 0 40%;
+    }
+
+    .product-rechts {
+        flex: 0 0 55%;
+    }
+}
+
+/* Extra large devices (extra large desktops, 1200px and up) */
+@media (min-width: $screen-xl-min) {
+    .container {
+        max-width: 1400px;
+    }
+
+    body {
+        font-size: 17px;
+    }
+}
+/* Winkelwagen tabel */
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    .table td::before {
+        width: 35%;
+    }
+}
+
+/* Progress bar */
+@media (max-width: $screen-sm-max) {
+    .progress {
+        height: 15px;
+    }
+
+    .progress-bar {
+        font-size: 11px;
+        line-height: 15px;
+    }
+}
+
+/* Formuliervelden */
+@media (min-width: $screen-lg-min) {
+    form {
+        max-width: 800px;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+}
+
+
+
 html {
     font-size: 14px;
 }
@@ -154,7 +262,7 @@ body {
     background-color: #fff;
     padding: 40px;
     border-radius: 10px;
-    max-width: 900px;
+    max-width: 1200px;
     margin: auto;
 }
 
@@ -233,4 +341,16 @@ body {
     .product-omschrijving p {
         line-height: 1.6;
     }
-    b
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+    .btn-danger:hover {
+        background-color: #c82333;
+    }

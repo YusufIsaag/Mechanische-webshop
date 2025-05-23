@@ -2,7 +2,6 @@
 @model KE03_INTDEV_SE_1_Base.Pages.Producten.P1Model
 @{
 }
-
 <div class="Pagina">
     <div class="productpagina">
         <h1 class="product-titel">Gegroefde kogellager</h1>
@@ -18,9 +17,9 @@
             <div class="product-rechts">
                 <div class="prijs">€ 34,–</div>
 
-                <form method="post" asp-page-handler="AddToCart">
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
                     <input type="hidden" name="productId" value="1" />
-                    <input type="hidden" name="naam" value="Gegroefde kogellager" />
+                    <input type="hidden" name="Product" value="Gegroefde kogellager" />
                     <input type="hidden" name="prijs" value="34" />
 
                     <label for="aantal">Aantal:</label>

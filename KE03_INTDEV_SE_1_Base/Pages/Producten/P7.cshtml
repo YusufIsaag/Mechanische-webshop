@@ -10,18 +10,23 @@
 
         <div class="product-container">
             <div class="product-links">
-                <img class="product-afbeelding"
-                     https: //derijk.eu/wp-content/uploads/2018/12/1493-016160.jpg" 
+                <img class="product-afbeelding" 
+                     src="https://derijk.eu/wp-content/uploads/2018/12/1493-016160.jpg"
                      alt="BOUT M16 x 130 + MOER M16 + 2 RING M16" />
             </div>
 
             <div class="product-rechts">
-                <div class="prijs">€ 329,–</div>
+                <div class="prijs">€ 18,–</div>
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="7" />
+                    <input type="hidden" name="Product" value="Bout M16 x 130 + moer M16 + 2 ring M16" />
+                    <input type="hidden" name="prijs" value="18" />
 
-                <label for="aantal">Aantal:</label>
-                <input type="number" id="aantal" class="aantal-input" value="1" min="1">
+                    <label for="aantal">Aantal:</label>
+                    <input type="number" id="aantal" name="aantal" value="1" min="1" class="aantal-input" />
 
-                <button class="winkelwagen-knop">In winkelwagen</button>
+                    <button type="submit" class="winkelwagen-knop">In winkelwagen</button>
+                </form>
             </div>
         </div>
 

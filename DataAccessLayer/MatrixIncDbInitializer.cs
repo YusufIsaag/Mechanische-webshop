@@ -46,7 +46,7 @@ namespace DataAccessLayer
                 new Product { Naam = "Nokkenkas", Beschrijving = "Hoogwaardige nokkenas van slijtvast staal voor precisie in klepbediening. Ideaal voor motortiming en betrouwbaarheid.", Prijs = 169m },
                 new Product { Naam = "Drijfstang ItalianRP", Beschrijving = "Set van 4 drijfstangen voor 1.8 20VT motoren. Hoogwaardig gesmeed staal voor extreme belasting en duurzaamheid.", Prijs = 329m },
                 new Product { Naam = "Professionele netwerkkabel krimptang", Beschrijving = "Metaal krimptang met ratelmechanisme voor RJ45/RJ11 connectoren. Ergonomisch ontwerp voor precisie en comfort.", Prijs = 19m },
-                new Product { Naam = "Bout M16 x 130 set", Beschrijving = "Complete set met bout, moer en ringen M16 voor zware constructies. Hoogwaardig staal voor industriële toepassingen.", Prijs = 329m },
+                new Product { Naam = "Bout M16 x 130 set", Beschrijving = "Complete set met bout, moer en ringen M16 voor zware constructies. Hoogwaardig staal voor industriële toepassingen.", Prijs = 18m },
                 new Product { Naam = "Moer voor draaideind M10x1", Beschrijving = "Verzinkte moer M10x1 met sleutelwijdte 14. Corrosiebestendig voor automotive en industriële toepassingen.", Prijs = 0.99m },
                 new Product { Naam = "Getangde aandrijfriem", Beschrijving = "Duurzame getande aandrijfriem voor efficiënte krachttransmissie. Slijtvast materiaal voor motoren en machines.", Prijs = 64.99m }
             };

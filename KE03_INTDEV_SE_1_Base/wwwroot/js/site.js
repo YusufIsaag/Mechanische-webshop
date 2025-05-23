@@ -2,3 +2,6 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+
+function confirmVerwijderen() {
+    return confirm('Weet u zeker dat u dit product uit uw winkelwagen wilt verwijderen?');

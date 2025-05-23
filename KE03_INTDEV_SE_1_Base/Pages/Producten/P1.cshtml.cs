@@ -22,7 +22,7 @@ namespace KE03_INTDEV_SE_1_Base.Pages.Producten
             WinkelwagenItems = await _context.WinkelwagenItems.ToListAsync();
         }
 
-        public async Task<IActionResult> OnPostAddToCart(int productId, int aantal)
+        public async Task<IActionResult> OnPostToevoegenAanWinkelwagen(int productId, int aantal)
         {
             var sessionId = HttpContext.Session.Id;
 
@@ -36,7 +36,9 @@ namespace KE03_INTDEV_SE_1_Base.Pages.Producten
             {
                 ProductId = product.ProductId,
                 Aantal = aantal,
-               
+                Product = product,
+                TotaalBedrag = product.Prijs * aantal
+
             };
 
             _context.WinkelwagenItems.Add(winkelwagenItem);
