@@ -1,0 +1,45 @@
+﻿@page
+@model KE03_INTDEV_SE_1_Base.Pages.Producten.P1Model
+@{
+}
+
+<div class="Pagina">
+    <div class="productpagina">
+        <h1 class="product-titel">Gegroefde kogellager</h1>
+        <hr>
+
+        <div class="product-container">
+            <div class="product-links">
+                <img class="product-afbeelding"
+                     src="https://www.gnesato.com/wp-content/uploads/2021/07/14706106.jpg"
+                     alt="Gegroefde kogellager" />
+            </div>
+
+            <div class="product-rechts">
+                <div class="prijs">€ 34,–</div>
+
+                <form method="post" asp-page-handler="AddToCart">
+                    <input type="hidden" name="productId" value="1" />
+                    <input type="hidden" name="naam" value="Gegroefde kogellager" />
+                    <input type="hidden" name="prijs" value="34" />
+
+                    <label for="aantal">Aantal:</label>
+                    <input type="number" id="aantal" name="aantal" value="1" min="1" class="aantal-input" />
+
+                    <button type="submit" class="winkelwagen-knop">In winkelwagen</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                Deze gegroefde kogellager is ontworpen voor hoge prestaties en duurzaamheid.
+                Ideaal voor toepassingen in machines en transportbanden.
+                Vervaardigd uit hoogwaardig staal met precisie-afwerking voor minimale wrijving en maximale levensduur.
+            </p>
+        </div>
+    </div>
+
+</div>

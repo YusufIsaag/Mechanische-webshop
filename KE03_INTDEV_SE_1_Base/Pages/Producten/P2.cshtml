@@ -1,0 +1,43 @@
+﻿@page
+@model KE03_INTDEV_SE_1_Base.Pages.Producten.P2Model
+@{
+}
+<div class="Pagina">
+    <div class="productpagina">
+        <h1 class="product-titel">Tandwiel smal achter</h1>
+        <hr>
+
+        <div class="product-container">
+            <div class="product-links">
+                <img class="product-afbeelding"
+                     src="https://www.motorpromo.nl/img/large/16668658591.jpg" 
+                     alt="(5B2f) Tandwiel smal achter 70 tand as 47mm st=6x24"/>
+            </div>
+
+            <div class="product-rechts">
+                <div class="prijs">€ 89,–</div>
+
+                <form method="post" asp-page-handler="ToevoegenAanWinkelwagen">
+                    <input type="hidden" name="productId" value="P2" />
+                    <input type="hidden" name="naam" value="Tandwiel smal achter" />
+                    <input type="hidden" name="prijs" value="89" />
+
+                    <label for="aantal">Aantal:</label>
+                    <input type="number" id="aantal" name="aantal" value="1" min="1" class="aantal-input" />
+
+                    <button type="submit" class="winkelwagen-knop">In winkelwagen</button>
+                </form>
+            </div>
+
+        <div class="product-omschrijving">
+            <h2>Productomschrijving</h2>
+            <p>
+                Dit smalle achtertandwiel met 70 tanden en een as van 47 mm is ontworpen voor precisie en duurzaamheid. 
+                Dankzij de 6x24 steek is het tandwiel geschikt voor verschillende scooters en lichte motorvoertuigen. 
+                Het hoogwaardige staal zorgt voor een lange levensduur en uitstekende krachtoverdracht, zelfs bij intensief gebruik. 
+                Ideaal voor zowel dagelijks verkeer als sportiever rijgedrag.
+
+            </p>
+        </div>
+    </div>
+</div>

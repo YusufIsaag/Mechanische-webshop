@@ -1,0 +1,59 @@
+﻿@page
+@model KE03_INTDEV_SE_1_Base.Pages.WinkelwagenModel
+@{
+    ViewData["Title"] = "Winkelwagen";
+}
+
+<h1>Mijn winkelwagen</h1>
+
+@if (Model.WinkelwagenItems != null && Model.WinkelwagenItems.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Aantal</th>
+                <th>Totaalbedrag</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.WinkelwagenItems)
+            {
+                <tr>
+                    <td>@item.Product</td>
+                    <td>@item.Aantal</td>
+                    <td>@item.TotaalBedrag.ToString("C")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Uw winkelwagen is leeg.</p>
+}
+
+
+
+
+
+@* @section Scripts { *@
+@*     <script> *@
+@*         // JavaScript voor het bijwerken van aantallen en verwijderen *@
+@*         document.querySelectorAll('.verwijder-knop').forEach(button => { *@
+@*             button.addEventListener('click', function() { *@
+@*                 const itemId = this.getAttribute('data-item-id'); *@
+@*                 // AJAX call naar server om item te verwijderen *@
+@*                 console.log('Verwijder item:', itemId); *@
+@*             }); *@
+@*         }); *@
+
+@*         document.querySelectorAll('.aantal-input').forEach(input => { *@
+@*             input.addEventListener('change', function() { *@
+@*                 const itemId = this.getAttribute('data-item-id'); *@
+@*                 const newQuantity = this.value; *@
+@*                 // AJAX call naar server om aantal bij te werken *@
+@*                 console.log('Update item:', itemId, 'Aantal:', newQuantity); *@
+@*             }); *@
+@*         }); *@
+@*     </script> *@

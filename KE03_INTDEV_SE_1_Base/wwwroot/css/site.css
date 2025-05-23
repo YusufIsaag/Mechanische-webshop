@@ -1,0 +1,236 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.custom-header {
+    background-color: rgb(58 113 113);
+    color: white !important;
+}
+
+    .custom-header .navbar-brand {
+        color: white !important;
+    }
+
+.footer {
+    background-color: rgb(58 113 113);
+}
+
+.footer-text {
+    color: white;
+    margin-left: 15px;
+}
+
+body {
+    margin-bottom: 40px;
+    background-color: #f4f6f8;
+}
+
+.my-custom-button {
+    background-color: #ffffff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 35px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+.winkelwagen {
+    border: none;
+    background-color: white;
+}
+
+.winkelwagen {
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 0.375rem;
+    padding: 0.375rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    position: relative;
+    left: 15px;
+    bottom: 6px;
+}
+
+.aanbieding {
+    margin-top: 20px;
+    height: 200px;
+    width: 85%;
+    border: 2px solid black;
+    position: relative;
+    left: 7.5%;
+    background-color: rgb(247, 244, 241);
+    text-align: center;
+}
+
+    .aanbieding > h3 {
+        font-size: 70px;
+        color: rgb(157, 47, 47);
+    }
+
+    .aanbieding > h4 {
+        font-size: 60px;
+        color: rgb(58 113 113);
+    }
+
+.button {
+    background-color: white;
+    color: rgb(58 113 113);
+    border: 2px solid black;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    height: 210px;
+    width: 150px;
+}
+
+    .button:hover {
+        background-color: rgb(239, 240, 245);
+        color: rgb(53, 21, 21);
+        text-decoration: underline 1px solid black;
+    }
+
+.box-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: medium;
+    margin-bottom: 50px;
+}
+
+.box {
+    display: inline-block;
+    vertical-align: top;
+    width: 130px;
+    height: 130px;
+    background-color: mintcream;
+    box-shadow: 2px 2px 4px;
+    margin-left: 70px;
+    margin-bottom: 70px;
+}
+
+.pagina {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.productpagina {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.product-titel {
+    text-align: center;
+    font-size: 2em;
+    color: #3a7171;
+    margin-bottom: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.product-links {
+    flex: 1;
+    min-width: 250px;
+}
+
+.product-afbeelding {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.product-rechts {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.prijs {
+    font-size: 1.6em;
+    color: #9d2f2f;
+    font-weight: bold;
+}
+
+.aantal-input {
+    width: 70px;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.winkelwagen-knop {
+    background-color: #3a7171;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .winkelwagen-knop:hover {
+        background-color: #2d5a5a;
+    }
+
+.product-omschrijving {
+    margin-top: 40px;
+}
+
+    .product-omschrijving h2 {
+        font-size: 1.4em;
+        color: #3a7171;
+        margin-bottom: 10px;
+    }
+
+    .product-omschrijving p {
+        line-height: 1.6;
+    }
+    b

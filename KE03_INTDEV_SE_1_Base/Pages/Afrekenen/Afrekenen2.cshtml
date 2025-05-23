@@ -1,0 +1,38 @@
+﻿@page
+@model KE03_INTDEV_SE_1_Base.Pages.Afrekenen2Model
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="progress">
+    <div class="progress-bar" role="progressbar" style="width: 66%;" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">66%</div>
+</div>
+<br />
+
+
+@* Betaling *@
+
+<label for="Betaalmethode">Betaalmethode</label>
+<select id="Betaalmethode">
+    <option value="IDEAL">IDEAL</option>
+    <option value="Achteraf Betalen">Achteraf Betalen</option>
+    <option value="Creditkaart">Creditkaart</option>
+    <option value="Debitkaart">Debitkaart</option>
+    <option value="Cadeaukaart">Cadeaukaart</option>
+</select>
+<br />
+<input type="reset" />
+<br />
+<br />
+
+<div clss="afrekenen1">
+    <button class="terug">
+        <a asp-area="" asp-page="/Afrekenen1">Terug</a>
+    </button>
+</div>
+
+<div clss="Bestellen">
+    <button class="Bestellen">
+        <a asp-area="" asp-page="/Index">Verder</a>
+    </button>
+</div>
